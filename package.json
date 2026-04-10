@@ -1,0 +1,30 @@
+{
+  "name": "collateralist",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Slack to Moda workflow built on Anthropic Managed Agents and Moda MCP",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "local:test": "tsx src/local-test.ts",
+    "auth:moda": "tsx src/auth-moda.ts",
+    "slack:setup": "tsx src/slack-setup.ts",
+    "slack:manifest": "tsx src/slack-manifest.ts",
+    "slack:whoami": "tsx src/slack-auth-test.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.86.1",
+    "@slack/web-api": "^7.12.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

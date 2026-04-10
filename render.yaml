@@ -1,0 +1,47 @@
+services:
+  - type: web
+    name: collateralist
+    runtime: node
+    plan: starter
+    healthCheckPath: /
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SLACK_BOT_TOKEN
+        sync: false
+      - key: SLACK_SIGNING_SECRET
+        sync: false
+      - key: SLACK_TEAM_ID
+        sync: false
+      - key: SLACK_BOT_USER_ID
+        sync: false
+      - key: SLACK_ALLOWED_CHANNEL_IDS
+        sync: false
+      - key: SLACK_ALLOWED_USER_IDS
+        sync: false
+      - key: MODA_MCP_SERVER_URL
+        value: https://mcp.moda.app
+      - key: MODA_MCP_AUTH_MODE
+        value: oauth
+      - key: MODA_MCP_ACCESS_TOKEN
+        sync: false
+      - key: MODA_MCP_REFRESH_TOKEN
+        sync: false
+      - key: MODA_MCP_CLIENT_ID
+        sync: false
+      - key: MODA_MCP_CLIENT_SECRET
+        sync: false
+      - key: MODA_MCP_TOKEN_ENDPOINT
+        value: https://mcp.moda.app/token
+      - key: MODA_MCP_RESOURCE
+        value: https://mcp.moda.app/
+      - key: MODA_MCP_EXPIRES_AT
+        sync: false
+      - key: MODA_MCP_TOKEN_ENDPOINT_AUTH
+        value: client_secret_post

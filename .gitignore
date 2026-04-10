@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+.env.local
+.data/state.json
+.data/slack-app-manifest.yaml
+test-artifacts
