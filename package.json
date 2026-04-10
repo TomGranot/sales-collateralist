@@ -2,6 +2,7 @@
   "name": "collateralist",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Slack to Moda workflow built on Anthropic Managed Agents and Moda MCP",
   "scripts": {
